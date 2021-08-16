@@ -28,7 +28,13 @@ Vue.component('v-header', require('./components/Header.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 import router from "./router";
+
+import BootstrapVue from 'bootstrap-vue' //Importing
+Vue.use(BootstrapVue)
+
+
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    BootstrapVue
 });

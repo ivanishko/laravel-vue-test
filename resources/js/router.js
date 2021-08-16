@@ -5,6 +5,7 @@ Vue.use(vueRouter)
 
 import Index from "./views/Index"
 import Blog from "./views/Blog"
+import Post from "./views/Post"
 
 const routes = [
     {
@@ -14,6 +15,10 @@ const routes = [
     {
         path: "/blog",
         component: Blog
+    },
+    {
+        path: "/post/:id",
+        component: Post
     }
 ]
 

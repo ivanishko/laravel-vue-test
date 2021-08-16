@@ -45,8 +45,23 @@ class PostsController extends Controller
             ]
         );
         if ($validator->fails()){
-             return $validator->messages();
+             return [
+             "status" => false,
+             "error" => $validator->messages()
+             ];
     }
+
+    $post = Post::create([
+        "title" => $request -> title,
+        "body" => $request -> body,
+    ]);
+
+    return [
+        "status" => true,
+        "post" => $post
+    ];
+
+
     }
 
 
@@ -58,7 +73,15 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        if (!$post) {
+            return response()-> json([
+                "status" => false,
+                "message" => "Post not found"
+            ])->setStatusCode(404);
+        }
+        return  $post;
     }
 
     /**
