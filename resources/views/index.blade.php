@@ -8,10 +8,9 @@
     <title>Test Vue</title>
 </head>
 <body>
-<h1>Hello World</h1>
 <div id="app">
-    <test></test>
-    <example-component></example-component>
+    <v-header></v-header>
+    <router-view></router-view>
 </div>
 <script src="./js/app.js"></script>
 </body>
