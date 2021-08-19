@@ -1,9 +1,9 @@
 <template>
 <div>
     <h1>Header</h1>
-    <ul class="dropdown-menu">
+    <ul class="">
         <li v-for="link in links">
-            <router-link :to="link.url"> {{link.title}}</router-link>
+            <router-link :to="link.url"> {{link.title}} </router-link>
         </li>
     </ul>
 </div>

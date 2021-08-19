@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>Blog</h1>
+        <router-link :to="'create'" class="btn btn-primary">Создать пост</router-link>
         <div class="row">
             <Post v-for="post in posts"
                   :title="post.title"
@@ -10,6 +11,7 @@
                   :key="post.id"
             />
         </div>
+
     </div>
 
 
